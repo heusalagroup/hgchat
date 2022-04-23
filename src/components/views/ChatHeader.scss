@@ -1,0 +1,133 @@
+@import "src/styles/variables";
+
+.App-header {
+
+  flex-shrink: 0;
+
+  margin           : 0;
+  padding          : 1em 0;
+  box-sizing       : border-box;
+
+  display          : flex;
+  flex-direction   : row;
+  align-items      : center;
+  justify-items    : stretch;
+  align-content    : stretch;
+  justify-content  : flex-end;
+
+  flex-wrap        : wrap;
+
+  & > .App-header-logo {
+
+    margin           : 0;
+    padding          : 0 1.5em 0 3em;
+    box-sizing       : border-box;
+
+    & > svg {
+      width  : auto;
+      height : 4em;
+    }
+
+  }
+
+  & > .App-header-title {
+
+    flex-grow        : 1;
+
+    margin           : 0;
+    padding          : 0;
+    box-sizing       : border-box;
+
+    font-size        : 24px;
+    font-family      : $font-family;
+    font-weight      : bold;
+
+  }
+
+  & > .App-header-from {
+
+    flex-shrink      : 0;
+
+    margin           : 0;
+    padding          : 0 1.5em 0 3em;
+    box-sizing       : border-box;
+
+    display          : flex;
+    flex-direction   : row;
+    align-items      : center;
+    justify-items    : stretch;
+    align-content    : stretch;
+    justify-content  : stretch;
+
+    & > .App-header-from-text {
+
+      margin           : 0;
+      padding          : 0 0.75em 0 0;
+      box-sizing       : border-box;
+
+      font-size        : 16px;
+      font-family      : $font-family;
+      font-weight      : bold;
+      text-align       : right;
+
+    }
+
+    & > .App-header-from-logo {
+
+      margin           : 0;
+      padding          : 0;
+      box-sizing       : border-box;
+
+      & > .App-header-from-logo-link {
+
+        & > svg {
+
+          margin           : 0;
+          padding          : 0;
+          outline          : 0;
+          box-sizing       : border-box;
+
+          width  : 10em;
+          height : auto;
+
+        }
+
+      }
+
+
+    }
+
+  }
+
+  & > .App-header-options {
+
+    margin           : 0;
+    padding          : 0;
+    box-sizing       : border-box;
+
+    display          : flex;
+    flex-direction   : row;
+    align-items      : center;
+    justify-items    : stretch;
+    align-content    : stretch;
+    justify-content  : stretch;
+
+    & > .App-header-options-button {
+
+      background-color : transparent;
+      border           : 0;
+      margin           : 0;
+      padding          : 1.5em;
+      box-sizing       : border-box;
+      cursor           :  pointer;
+
+      & > svg {
+        width: auto;
+        height: 2em;
+      }
+
+    }
+
+  }
+
+}

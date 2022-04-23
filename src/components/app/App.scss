@@ -1,0 +1,672 @@
+@import "src/styles/variables";
+
+// Styles
+.App {
+
+  font-size        : 16px;
+  font-family      : $font-family;
+
+  width            : 100%;
+  height           : 100%;
+
+  margin           : 0;
+  padding          : 0;
+  box-sizing       : border-box;
+
+  display          : flex;
+  flex-direction   : column;
+  align-items      : stretch;
+  justify-items    : stretch;
+  align-content    : stretch;
+  justify-content  : stretch;
+
+  overflow         : hidden;
+
+  & > .App-content {
+
+    flex-grow: 1;
+
+    margin           : 0;
+    padding          : 0 1em;
+    box-sizing       : border-box;
+
+    display          : flex;
+    flex-direction   : column;
+    align-items      : stretch;
+    justify-items    : stretch;
+    align-content    : stretch;
+    justify-content  : stretch;
+
+    overflow-y         : auto;
+
+    & > .App-content-message {
+
+      margin           : 0;
+      padding          : 0.5em 0;
+      box-sizing       : border-box;
+
+      display          : flex;
+      flex-direction   : row;
+      align-items      : stretch;
+      justify-items    : stretch;
+      align-content    : stretch;
+      justify-content  : stretch;
+
+      & > .App-content-message-inner {
+
+        position         : relative;
+
+        width            : 90%;
+        margin           : 0;
+        padding          : 0.75em 0;
+        box-sizing       : border-box;
+
+        display          : flex;
+        flex-direction   : row;
+        align-items      : center;
+        justify-items    : stretch;
+        align-content    : stretch;
+        justify-content  : stretch;
+
+        & > .App-content-message-inner-avatar {
+
+          flex-shrink: 0;
+
+          margin           : 0;
+          padding          : 0 0.25em 0 0.5em;
+          box-sizing       : border-box;
+
+          & > svg {
+            width: auto;
+            height: 2em;
+          }
+
+        }
+
+        & > .App-content-message-inner-nick {
+
+          flex-shrink: 0;
+
+          margin           : 0;
+          padding          : 0 0.5em 0 0;
+          box-sizing       : border-box;
+          font-weight      : bold;
+
+        }
+
+        & > .App-content-message-inner-content {
+
+          flex-grow        : 1;
+
+          margin           : 0;
+          padding          : 0 0.5em;
+          box-sizing       : border-box;
+
+        }
+
+        & > .App-content-message-inner-time {
+
+          flex-shrink      : 0;
+
+          margin           : 0;
+          padding          : 0 1em 0 1em;
+          box-sizing       : border-box;
+
+          font-size        : 10px;
+          font-family      : $font-family;
+          font-style       : italic;
+          position         : absolute;
+          right            : 0;
+          bottom           : 0;
+
+        }
+
+      }
+
+      &.App-content-message-is-mine {
+
+        & > .App-content-message-inner {
+
+          border-radius     : $message-border-radius-mine;
+          margin-left: 10%;
+
+        }
+
+      }
+
+      &.App-content-message-is-theirs {
+
+        padding: 1em 0;
+
+        & > .App-content-message-inner {
+          border-radius     : $message-border-radius-theirs;
+        }
+
+      }
+
+    }
+
+    .App-content-center {
+      text-align : center;
+    }
+
+  }
+
+  & > .App-footer {
+
+    flex-shrink: 0;
+
+    margin           : 0;
+    padding          : 0;
+    box-sizing       : border-box;
+
+    display          : flex;
+    flex-direction   : row;
+    align-items      : center;
+    justify-items    : stretch;
+    align-content    : stretch;
+    justify-content  : stretch;
+
+    & > .App-footer-icon {
+
+      flex-shrink      : 0;
+
+      outline          : 0;
+      border           : 0;
+      margin           : 0 1em 0 1em;
+      padding          : 0;
+      box-sizing       : border-box;
+
+      & > svg {
+
+        border           : 0;
+        margin           : 0;
+        padding          : 0;
+        box-sizing       : border-box;
+
+        width: auto;
+        height: 2em;
+
+      }
+
+    }
+
+    & > .App-footer-field {
+
+      flex-grow        : 1;
+
+      outline          : 0;
+      border           : 0;
+      margin           : 0;
+      padding          : 0;
+      box-sizing       : border-box;
+
+      & > form {
+
+        width            : 100%;
+
+        outline          : 0;
+        border           : 0;
+        margin           : 0;
+        padding          : 0;
+        box-sizing       : border-box;
+        border-radius    : 0;
+
+        & > .App-footer-field-input {
+
+          font-size        : 18px;
+          font-family      : $font-family;
+
+          width            : 100%;
+
+          outline          : 0;
+          border           : 0;
+          margin           : 0;
+          padding          : 1em 0;
+          box-sizing       : border-box;
+          border-radius    : 0;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &.chat-login-view {
+
+    & > .App-content {
+
+      display         : flex;
+      flex-direction  : row;
+      align-items     : flex-start;
+      align-content   : center;
+      justify-items   : center;
+      justify-content : center;
+
+      & > .chat-login-form {
+
+        display        : flex;
+        flex-direction : column;
+        max-width      : 800px;
+
+        & > .field {
+
+          display : flex;
+          align-items     : flex-start;
+          align-content   : center;
+          justify-items   : center;
+          justify-content : center;
+
+          & > .field-input {
+
+            font-size     : 18px;
+            box-sizing    : border-box;
+            margin        : 1em 0;
+            padding       : 0.75em 1em;
+            border-radius : 12px;
+            width         : 100%;
+
+          }
+
+          &.field-avatar {
+
+            border-radius    : 12px;
+
+            & > .field-avatar-text {
+
+              font-size: 18px;
+              padding: 1em;
+
+            }
+
+            & > .field-avatar-button {
+
+              box-sizing       : border-box;
+              margin           : 1em;
+              padding          : 0.75em 1em;
+              outline          : 0;
+              border           : 0;
+
+            }
+
+          }
+
+        }
+
+        & > .submit-button {
+
+          box-sizing       : border-box;
+          margin           : 1em 0;
+          padding          : 0.75em 1em;
+          outline          : 0;
+          border           : 0;
+
+          font-size        : 20px;
+          font-weight      : bold;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &.chat-joining-view {
+
+    & > .App-content,
+    & > .App-footer {
+
+      font-size : 18px;
+      padding   : 1em;
+
+    }
+
+  }
+
+
+  // Light theme colors
+
+  &.Light-App {
+
+    color            : $light-main-text-color;
+    background-color : $light-main-background;
+
+    .field-input,
+    .App-footer-field-input {
+      color            : $light-field-text;
+      background-color : $light-field-background;
+      //&::placeholder {
+      //  color            : $light-field-placeholder-color;
+      //  opacity          : 1;
+      //}
+    }
+
+    a,
+    a:visited,
+    a:active {
+      color: $light-link-text-color
+    }
+
+    & > .App-header {
+
+      background-color : $light-header-background;
+      border-bottom    : $light-header-border;
+
+      & > .App-header-logo {
+
+        & > svg {
+          fill : $light-header-text-color;
+        }
+
+      }
+
+      & > .App-header-title {
+        color            : $light-header-text-color;
+      }
+
+      & > .App-header-from {
+
+        & > .App-header-from-text {
+          color            : $light-header-text-color;
+        }
+
+        & > .App-header-from-logo {
+
+          & > .App-header-from-logo-link {
+            & > svg {
+              fill             : $light-header-text-color;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+    & > .App-content {
+
+      background-color : $light-content-background;
+
+      & > .App-content-message {
+
+        & > .App-content-message-inner {
+          & > .App-content-message-inner-avatar {
+            & > svg {
+              fill: $light-main-text-color;
+            }
+          }
+        }
+
+        &.App-content-message-is-mine {
+
+          & > .App-content-message-inner {
+
+            border            : $light-message-border-mine;
+            background-color  : $light-message-background-mine;
+
+          }
+
+        }
+
+        &.App-content-message-is-theirs {
+
+          & > .App-content-message-inner {
+
+            border            : $light-message-border-theirs;
+            background-color  : $light-message-background-theirs;
+
+          }
+
+        }
+
+
+      }
+
+    }
+
+    & > .App-footer {
+
+      border-top       : $light-footer-border;
+      background-color : $light-footer-background;
+
+      & > .App-footer-icon {
+        & > svg {
+          fill: $light-footer-icon-color;
+        }
+      }
+
+    }
+
+    &.chat-login-view {
+
+      & > .App-content {
+
+        & > .chat-login-form {
+
+          & > .field {
+
+            & > .field-input {
+
+              border        : 1px solid $light-border-color-shade-22;
+
+            }
+
+            &.field-avatar {
+
+              border           : 1px solid $light-border-color-shade-22;
+              background-color : $light-avatar-background-color;
+
+              & > .field-avatar-button {
+
+                background-color : $light-avatar-background-color;
+
+                &.selected {
+                  background-color : $light-selected-avatar-background-color;
+                }
+
+              }
+
+            }
+
+          }
+
+          & > .submit-button {
+
+            color            : $light-submit-button-text-color;
+            background-color : $light-submit-button-background-color;
+
+            &.submit-button-disabled {
+              background-color : $light-disabled-submit-button-background-color;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+  // Dark theme colors
+
+  &.Dark-App {
+
+    color            : $dark-main-text-color;
+    background-color : $dark-main-background;
+
+    a,
+    a:visited,
+    a:active {
+      color: $dark-link-text-color
+    }
+
+    //input.field-input::-webkit-input-placeholder,
+    //input.field-input::-moz-placeholder,
+    //input.field-input:-ms-input-placeholder,
+    //input.field-input:-moz-placeholder,
+    //input.field-input:placeholder-shown,
+    //input.field-input::placeholder {
+    //  color            : $dark-field-placeholder-color;
+    //  opacity          : 1;
+    //}
+
+    .field-input,
+    .App-footer-field-input {
+
+      color            : $dark-field-text;
+      background-color : $dark-field-background;
+
+    }
+
+
+    & > .App-header {
+
+      background-color : $dark-header-background;
+      border-bottom    : $dark-header-border;
+
+      & > .App-header-logo {
+        & > svg {
+          fill   : $dark-header-text-color;
+        }
+      }
+
+      & > .App-header-title {
+        color            : $dark-header-text-color;
+      }
+
+      & > .App-header-from {
+
+        & > .App-header-from-text {
+          color            : $dark-header-text-color;
+        }
+
+        & > .App-header-from-logo {
+
+          & > .App-header-from-logo-link {
+            & > svg {
+              fill             : $dark-header-text-color;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+    & > .App-content {
+
+      background-color : $dark-content-background;
+
+      & > .App-content-message {
+
+        & > .App-content-message-inner {
+          & > .App-content-message-inner-avatar {
+            & > svg {
+              fill: $dark-main-text-color;
+            }
+          }
+        }
+
+        &.App-content-message-is-mine {
+
+          & > .App-content-message-inner {
+
+            border            : $dark-message-border-mine;
+            background-color  : $dark-message-background-mine;
+
+          }
+
+        }
+
+        &.App-content-message-is-theirs {
+
+          & > .App-content-message-inner {
+
+            border            : $dark-message-border-theirs;
+            background-color  : $dark-message-background-theirs;
+
+          }
+
+        }
+
+
+      }
+
+    }
+
+    & > .App-footer {
+
+      border-top       : $dark-footer-border;
+      background-color : $dark-footer-background;
+
+      & > .App-footer-icon {
+        & > svg {
+          fill: $dark-footer-icon-color;
+        }
+      }
+
+    }
+
+    &.chat-login-view {
+
+      & > .App-content {
+
+        & > .chat-login-form {
+
+          & > .field {
+
+            & > .field-input {
+
+              border        : 1px solid $dark-border-color-shade-22;
+
+            }
+
+            &.field-avatar {
+
+              border           : 1px solid $dark-border-color-shade-22;
+              background-color : $dark-avatar-background-color;
+
+              & > .field-avatar-button {
+
+                background-color : $dark-avatar-background-color;
+
+                &.selected {
+                  background-color : $dark-selected-avatar-background-color;
+                }
+
+              }
+
+            }
+
+          }
+
+          & > .submit-button {
+
+            color            : $dark-submit-button-text-color;
+            background-color : $dark-submit-button-background-color;
+
+            &.submit-button-disabled {
+              background-color : $dark-disabled-submit-button-background-color;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+}

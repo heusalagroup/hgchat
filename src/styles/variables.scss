@@ -1,0 +1,81 @@
+
+// Common variables
+
+$font-family                   : 'Roboto Condensed', sans-serif;
+$message-border-radius-mine    : 12px;
+$message-border-radius-theirs  : 12px;
+$border-style                  : solid;
+$wide-border-size              : 2px;
+$narrow-border-size            : 1px;
+
+// Light theme
+
+$light-field-text                        : #000000;
+$light-field-background                  : #ffffff;
+$light-link-text-color                   : #1111cd;
+$light-main-text-color                   : #222222;
+$light-border-color                      : #000000;
+$light-border-color-shade-22             : #00000022;
+$light-border-2-color-shade-55           : #22222255;
+$light-main-background                   : #028762E2;    // Also header color
+$light-header-text-color                 : #ffffff;
+$light-background-color                  : #ffffff;
+$light-background-color-shade-50         : #ffffff50;
+$light-background-color-shade-ee         : #ffffffee;
+$light-selected-text-color               : #ffffff;
+$light-selected-background-color         : #00990066;
+$light-disabled-select-background-color  : #00000033;
+$light-alternative-background-color      : #02876222;
+
+$light-header-background                        : $light-background-color-shade-50;
+$light-content-background                       : $light-background-color-shade-ee;
+$light-footer-background                        : $light-background-color;
+$light-avatar-background-color                  : $light-background-color;
+$light-message-background-theirs                : $light-background-color;
+$light-message-background-mine                  : $light-alternative-background-color;
+$light-avatar-background-color                  : transparent;
+$light-selected-avatar-background-color         : $light-selected-background-color;
+$light-submit-button-text-color                 : $light-selected-text-color;
+$light-submit-button-background-color           : $light-selected-background-color;
+$light-disabled-submit-button-background-color  : $light-disabled-select-background-color;
+$light-header-border                            : $wide-border-size $border-style $light-border-color;
+$light-footer-border                            : $wide-border-size $border-style $light-border-color;
+$light-message-border-mine                      : $narrow-border-size $border-style $light-border-2-color-shade-55;
+$light-message-border-theirs                    : $narrow-border-size $border-style $light-border-2-color-shade-55;
+$light-footer-icon-color                        : $light-main-text-color;
+
+// Dark theme
+
+$dark-field-text                        : #ffffff;
+$dark-field-background                  : #222222;
+$dark-border-color                      : #000000;
+$dark-border-color-shade-22             : #eeeeee22;
+$dark-border-2-color-shade-55           : #cccccc55;
+$dark-main-background                   : #033c32e3;    // Also header color
+$dark-background-color                  : #222222;
+$dark-background-color-shade-50         : #00000050;
+$dark-background-color-shade-ee         : rgba(0, 0, 0, 0.36);
+$dark-selected-background-color         : #00990066;
+$dark-disabled-select-background-color  : #ffffff22;
+$dark-alternative-background-color      : #02876222;
+$dark-link-text-color                   : #ffffff;
+$dark-main-text-color                   : #dddddd;
+$dark-header-text-color                 : #dddddd;
+$dark-selected-text-color               : #dddddd;
+
+$dark-header-background                        : $dark-background-color-shade-50;
+$dark-content-background                       : $dark-background-color-shade-ee;
+$dark-footer-background                        : $dark-background-color;
+$dark-avatar-background-color                  : $dark-background-color;
+$dark-message-background-theirs                : $dark-background-color;
+$dark-message-background-mine                  : $dark-alternative-background-color;
+$dark-avatar-background-color                  : transparent;
+$dark-selected-avatar-background-color         : $dark-selected-background-color;
+$dark-submit-button-text-color                 : $dark-selected-text-color;
+$dark-submit-button-background-color           : $dark-selected-background-color;
+$dark-disabled-submit-button-background-color  : $dark-disabled-select-background-color;
+$dark-header-border                            : $wide-border-size $border-style $dark-border-color;
+$dark-footer-border                            : $wide-border-size $border-style $dark-border-color;
+$dark-message-border-mine                      : $narrow-border-size $border-style $dark-border-2-color-shade-55;
+$dark-message-border-theirs                    : $narrow-border-size $border-style $dark-border-2-color-shade-55;
+$dark-footer-icon-color                        : $dark-main-text-color;
